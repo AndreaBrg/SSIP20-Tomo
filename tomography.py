@@ -152,7 +152,7 @@ def lasso_reconstruction(image, angles):
 
 
 if __name__ == '__main__':
-    run_name = 2
+    run_name = 1
     out_path = os.path.join("outputs", str(run_name))
     os.makedirs(out_path, exist_ok=True)
     
@@ -163,11 +163,11 @@ if __name__ == '__main__':
     size = 128
     
     # Generate square image of size X size pixels
-    image = generate_synthetic_data(size)
+    # image = generate_synthetic_data(size)
     
     # Read image from images folder
-    # image = imread("images/image2.png", as_gray=True)
-    # image = resize(image, (size, size))
+    image = imread("images/image2.png", as_gray=True)
+    image = resize(image, (size, size))
     
     # Use standard test image
     # image = shepp_logan_phantom()
